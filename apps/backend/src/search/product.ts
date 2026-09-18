@@ -1,6 +1,4 @@
 /**
- * TEMPORARY — remove once Medusa v2.20.0 ships a built-in product search index.
- *
  * Product search index definition. Files under `src/search` are imported by
  * Medusa's search index loader before the app boots; `defineSearchIndex` does
  * the registering, so this file only has to declare the index.
@@ -61,6 +59,7 @@ type ProductRow = {
   thumbnail?: string | null
   status?: string | null
   created_at?: string | Date | null
+  deleted_at?: string | Date | null
   categories?: ({ name?: string | null } | null)[] | null
   tags?: ({ value?: string | null } | null)[] | null
   options?:
@@ -194,7 +193,6 @@ function toDocument(product: ProductRow): ProductDocument {
     description: product.description ?? null,
     handle: product.handle ?? null,
     thumbnail: product.thumbnail ?? null,
-    status: product.status ?? null,
     created_at: product.created_at ?? null,
     category,
     labels,
@@ -228,7 +226,6 @@ export default defineSearchIndex({
     description: search.text().searchable({ weight: 1 }),
     handle: search.keyword().retrievable(),
     thumbnail: search.keyword().retrievable(),
-    status: search.keyword().filterable(),
     created_at: search.date().sortable().retrievable(),
     category: search.keyword().array().filterable().facetable().retrievable(),
     labels: search.keyword().array().filterable().facetable().retrievable(),
@@ -269,28 +266,49 @@ export default defineSearchIndex({
     const { data: products } = await container.query.graph({
       entity: 'product',
       fields: PRODUCT_GRAPH_FIELDS,
-      filters: { id: ids },
+      filters: { id: ids, status: 'published' },
       context: PRICE_CONTEXT,
     })
 
-    // A product that no longer resolves was deleted between the event and now.
-    if (!products.length) {
-      return [{ action: 'delete', filters: { id: ids } }]
-    }
+    const indexable = new Set(products.map((product) => product.id))
+
+    // An id the query didn't return is either no longer published or no longer
+    // there at all, and a product that leaves the index is what makes
+    // unpublishing take effect.
+    const stale = ids.filter((id) => !indexable.has(id))
 
     return [
-      { action: 'upsert', documents: products.map(toDocument) },
+      ...(stale.length
+        ? [{ action: 'delete' as const, filters: { id: stale } }]
+        : []),
+      ...(products.length
+        ? [{ action: 'upsert' as const, documents: products.map(toDocument) }]
+        : []),
     ]
   },
-  async *seed({ container, filters }) {
+  async *seed({ container, filters, catchup }) {
     let skip = 0
+
+    // The full pass writes published products and nothing else. The catch-up
+    // pass has to see the rows the full pass may have written before they
+    // changed, so it takes every status and soft-deleted rows too, and decides
+    // per row whether it belongs in the index.
+    const seedFilters = {
+      ...(filters ?? {}),
+      ...(catchup
+        ? { updated_at: { $gte: catchup.since } }
+        : { status: 'published' as const }),
+    }
 
     while (true) {
       const { data: products } = await container.query.graph({
         entity: 'product',
-        fields: PRODUCT_GRAPH_FIELDS,
-        filters: filters ?? {},
+        fields: catchup
+          ? [...PRODUCT_GRAPH_FIELDS, 'deleted_at']
+          : PRODUCT_GRAPH_FIELDS,
+        filters: seedFilters,
         pagination: { skip, take: SEED_BATCH_SIZE, order: { id: 'ASC' } },
+        withDeleted: !!catchup,
         context: PRICE_CONTEXT,
       })
 
@@ -298,7 +316,26 @@ export default defineSearchIndex({
         return
       }
 
-      yield products.map(toDocument)
+      const belongs = (product: ProductRow) =>
+        !product.deleted_at && product.status === 'published'
+      const indexable = products.filter(belongs)
+      const stale = products
+        .filter((product) => !belongs(product))
+        .map((product) => product.id)
+
+      yield [
+        ...(stale.length
+          ? [{ action: 'delete' as const, filters: { id: stale } }]
+          : []),
+        ...(indexable.length
+          ? [
+              {
+                action: 'upsert' as const,
+                documents: indexable.map(toDocument),
+              },
+            ]
+          : []),
+      ]
 
       if (products.length < SEED_BATCH_SIZE) {
         return
