@@ -11,9 +11,9 @@ export default async function Footer() {
   const productCategories = await listCategories();
 
   return (
-    <footer className="border-t border-ui-border-base w-full">
+    <footer className="border-t border-stone-300 bg-[#211d1a] text-stone-100 w-full">
       <div className="content-container flex flex-col w-full">
-        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
+        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-20 small:py-28">
           <div>
             <LocalizedClientLink
               href="/"
@@ -108,8 +108,8 @@ export default async function Footer() {
               </div>
             )}
             <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Colourpalet</span>
-              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
+              <span className="txt-small-plus text-stone-100">Studio</span>
+              <ul className="grid grid-cols-1 gap-y-2 text-stone-400 txt-small">
                 <li>
                   <a
                     href="/store"
@@ -126,6 +126,12 @@ export default async function Footer() {
                     Custom artwork
                   </a>
                 </li>
+                <li><a href="/about" className="hover:text-amber-200">About the artist</a></li>
+                <li><a href="/contact" className="hover:text-amber-200">Contact</a></li>
+                <li><a href="/faq" className="hover:text-amber-200">FAQ</a></li>
+                <li><a href="/shipping-returns" className="hover:text-amber-200">Shipping & returns</a></li>
+                <li><a href="/privacy" className="hover:text-amber-200">Privacy</a></li>
+                <li><a href="/terms" className="hover:text-amber-200">Terms</a></li>
               </ul>
             </div>
           </div>

@@ -2,6 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+:root { --canvas: #f7f2e9; --ink: #211d1a; }
+html { scroll-behavior: smooth; }
+body { background: var(--canvas); color: var(--ink); }
+::selection { background: #e7b878; color: #211d1a; }
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -53,6 +58,9 @@
   .content-container {
     @apply max-w-[1440px] w-full mx-auto px-6;
   }
+
+  .editorial-kicker { @apply text-xs font-semibold uppercase tracking-[0.28em] text-amber-900; }
+  .paper-panel { @apply border border-stone-300/80 bg-[#fffdf8] shadow-[0_18px_60px_rgba(67,48,32,0.08)]; }
 
   .contrast-btn {
     @apply px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-200 ease-in;

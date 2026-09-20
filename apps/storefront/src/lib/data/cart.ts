@@ -24,7 +24,7 @@ import { getLocale } from "./locale-actions"
 export async function retrieveCart(cartId?: string, fields?: string) {
   const id = cartId || (await getCartId())
   fields ??=
-    "*items, *region, *items.product, *items.variant, *items.thumbnail, *items.metadata, +items.total, *promotions, +shipping_methods.name"
+    "*items, *region, *items.product, *items.variant, +items.variant.inventory_quantity, *items.thumbnail, *items.metadata, +items.total, *promotions, +shipping_methods.name"
 
   if (!id) {
     return null
@@ -166,6 +166,10 @@ export async function updateLineItem({
 }) {
   if (!lineId) {
     throw new Error("Missing lineItem ID when updating line item")
+  }
+
+  if (!Number.isInteger(quantity) || quantity < 1) {
+    throw new Error("Quantity must be a positive whole number")
   }
 
   const cartId = await getCartId()

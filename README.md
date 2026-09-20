@@ -21,4 +21,12 @@ pnpm lint
 pnpm build
 ```
 
-Project decisions are documented in `AGENTS.md`, `ARCHITECTURE.md`, `SCOPE.md`, and `BUSINESS_RULES.md`.
+## Documentation map
+
+- Start with `PROJECT_STATUS.md` for what exists, known gaps, and the recommended next task.
+- Use `PROJECT_MANAGEMENT.md` for workflow, ownership, content operations, and release management.
+- `ARCHITECTURE.md`, `SCOPE.md`, `BUSINESS_RULES.md`, and `API_RULES.md` define technical and product boundaries.
+- `LOCAL_SETUP.md`, `TESTING.md`, and `REVIEW_CHECKLIST.md` explain setup and verification.
+- `ROADMAP.md` tracks delivery phases.
+
+AI agents must follow `AGENTS.md` before editing.

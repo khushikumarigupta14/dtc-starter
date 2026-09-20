@@ -2,7 +2,7 @@ import { Button, Heading } from "@modules/common/components/ui";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 const Hero = () => {
   return (
-    <section className="min-h-[70vh] w-full border-b border-stone-200 relative overflow-hidden bg-[#f2eadf]">
+    <section className="min-h-[76vh] w-full border-b border-stone-300 relative overflow-hidden bg-[#efe4d3]">
       <div className="absolute -right-24 -top-20 h-96 w-96 rounded-full bg-amber-200/60 blur-3xl" />
       <div className="absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-rose-200/50 blur-3xl" />
       <div className="content-container relative z-10 flex min-h-[70vh] flex-col justify-center py-20">
@@ -10,7 +10,7 @@ const Hero = () => {
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-amber-900">Original art · Made in India</p>
           <Heading
             level="h1"
-            className="text-4xl leading-tight text-stone-950 font-normal small:text-6xl"
+            className="max-w-2xl text-5xl leading-[0.98] tracking-[-0.04em] text-stone-950 font-normal small:text-7xl"
           >
             Art that makes a space feel like yours.
           </Heading>

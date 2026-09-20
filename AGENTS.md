@@ -6,7 +6,7 @@ Build and maintain Colourpalet without changing its agreed architecture or busin
 
 ## Read Before Coding
 
-Read `README.md`, `SCOPE.md`, `ARCHITECTURE.md`, `BUSINESS_RULES.md`, `API_RULES.md`, `UI_GUIDELINES.md`, `TESTING.md`, and `REVIEW_CHECKLIST.md` before editing. Follow an explicit task when it clearly overrides a documented rule and update the relevant documentation.
+Read `README.md`, `PROJECT_STATUS.md`, `PROJECT_MANAGEMENT.md`, `SCOPE.md`, `ARCHITECTURE.md`, `BUSINESS_RULES.md`, `API_RULES.md`, `UI_GUIDELINES.md`, `TESTING.md`, and `REVIEW_CHECKLIST.md` before editing. Follow an explicit task when it clearly overrides a documented rule and update the relevant documentation.
 
 ## Locked MVP Technology
 
@@ -29,4 +29,4 @@ Do not add MongoDB, Razorpay, Stripe, PayPal, Cloudinary, AWS S3, Firebase, Supa
 
 ## Workflow and Definition of Done
 
-Find the existing implementation, identify the relevant Medusa primitive, make the smallest coherent typed change, add or update tests, run relevant validation, and review against `REVIEW_CHECKLIST.md`. Report changed files, behavior, checks, exclusions, and assumptions.
+Find the existing implementation, identify the relevant Medusa primitive, make the smallest coherent typed change, add or update tests, run relevant validation, and review against `REVIEW_CHECKLIST.md`. Report changed files, behavior, checks, exclusions, assumptions, and the best next task. Update `PROJECT_STATUS.md` and `ROADMAP.md` when implementation status changes.
