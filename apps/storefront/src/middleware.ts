@@ -19,6 +19,12 @@ async function getRegionMap(cacheId: string) {
     )
   }
 
+  if (!PUBLISHABLE_API_KEY) {
+    throw new Error(
+      "Middleware.ts: NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY is missing. Seed the backend and copy its active publishable key into apps/storefront/.env.local."
+    )
+  }
+
   if (
     !regionMap.keys().next().value ||
     regionMapUpdated < Date.now() - 3600 * 1000
@@ -27,7 +33,7 @@ async function getRegionMap(cacheId: string) {
     const response = await fetch(`${BACKEND_URL}/store/regions`, {
       method: "GET",
       headers: {
-        "x-publishable-api-key": PUBLISHABLE_API_KEY!,
+        "x-publishable-api-key": PUBLISHABLE_API_KEY,
       },
       next: {
         revalidate: 3600,

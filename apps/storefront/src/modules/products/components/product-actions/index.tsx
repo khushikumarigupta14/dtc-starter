@@ -12,6 +12,7 @@ import { useEffect, useMemo, useRef, useState } from "react"
 import ProductPrice from "../product-price"
 import MobileActions from "./mobile-actions"
 import { useRouter } from "next/navigation"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 type ProductActionsProps = {
   product: HttpTypes.StoreProduct
@@ -179,9 +180,17 @@ export default function ProductActions({
           {!selectedVariant
             ? "Select variant"
             : !inStock || !isValidVariant
-            ? "Out of stock"
+            ? "SOLD"
             : "Add to cart"}
         </Button>
+        {selectedVariant && !inStock && (
+          <div className="rounded-md bg-stone-50 p-4 text-center">
+            <p className="text-sm text-stone-700">This original artwork has found its new home.</p>
+            <LocalizedClientLink href={`/custom-artwork?inspired_by=${product.id}`} className="mt-3 inline-block text-sm font-medium text-amber-900 underline underline-offset-4">
+              Request similar artwork
+            </LocalizedClientLink>
+          </div>
+        )}
         <MobileActions
           product={product}
           variant={selectedVariant}
