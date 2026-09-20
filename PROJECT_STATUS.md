@@ -56,7 +56,7 @@ Important entry points:
 
 ### Custom artwork enquiries
 
-The custom form is an enquiry, not a cart item or order. The storefront server action posts to `/store/custom-artwork-requests`; the backend validates with Zod and runs a Medusa workflow that writes through the custom module. An Admin API can list requests at `/admin/custom-artwork-requests`. A customer can arrive from a sold artwork and retain its product ID as inspiration.
+The custom form is an enquiry, not a cart item or order. The storefront server action posts to `/store/custom-artwork-requests`; the backend validates with Zod and runs a Medusa workflow that writes through the custom module. An Admin API lists requests at `/admin/custom-artwork-requests`, and the Medusa Admin page at `/app/custom-artwork-requests` gives operators a read-only enquiry view. A customer can arrive from a sold artwork and retain its product ID as inspiration.
 
 Important entry points:
 
@@ -65,6 +65,7 @@ Important entry points:
 - `apps/storefront/src/lib/data/custom-artwork-requests.ts`
 - `apps/backend/src/api/store/custom-artwork-requests/route.ts`
 - `apps/backend/src/api/admin/custom-artwork-requests/route.ts`
+- `apps/backend/src/admin/routes/custom-artwork-requests/page.tsx`
 - `apps/backend/src/workflows/create-custom-artwork-request.ts`
 - `apps/backend/src/modules/custom-artwork-request`
 
@@ -77,6 +78,7 @@ The storefront includes About, Contact, FAQ, Shipping & Returns, Privacy, Terms,
 - Cart retrieval now explicitly requests `items.variant.inventory_quantity`.
 - Managed-inventory quantity selectors use the current Medusa inventory value instead of a hard-coded limit, retain the current quantity when availability changes, disable during updates, and no longer render a duplicate option.
 - The server action rejects non-integer or sub-one quantities before calling Medusa; Medusa remains authoritative and performs final inventory validation.
+- Medusa Admin now includes a read-only Custom artwork requests page with loading, error/retry, empty, and populated states.
 
 ## Known gaps and risks
 
@@ -96,8 +98,8 @@ The storefront includes About, Contact, FAQ, Shipping & Returns, Privacy, Terms,
 
 ### P2 — Operations and experience
 
-1. Build a Medusa Admin extension for viewing/updating custom artwork request statuses if the Admin API alone is not sufficient for the operator.
-2. Add enquiry status transitions and notes only after the operator workflow is agreed.
+1. Agree the custom-request operator workflow, then add authenticated status updates and internal notes to the existing read-only Admin page.
+2. Add pagination/search when enquiry volume requires it; the MVP currently returns requests newest-first.
 3. Complete responsive, keyboard, screen-reader, contrast, error/empty/loading, SEO, metadata, performance, and image optimization review.
 4. Add end-to-end coverage for browse → cart → COD checkout → confirmation and sold artwork → custom request.
 5. Verify all footer links preserve the country-code route and add automated navigation coverage.
@@ -106,7 +108,7 @@ The storefront includes About, Contact, FAQ, Shipping & Returns, Privacy, Terms,
 
 1. Define final business, contact, shipping, return, tax, and legal inputs with the owner.
 2. Test the complete Medusa flows against a clean PostgreSQL database.
-3. Decide the custom-request Admin workflow and implement only the missing operator UI/status behavior.
+3. Agree and implement status transitions/internal notes in the existing custom-request Admin page.
 4. Prepare production infrastructure, backups, secrets, email, monitoring, and a rollback plan.
 5. Run accessibility, performance, security, responsive, and content QA; then complete launch acceptance.
 
@@ -116,6 +118,7 @@ On 20 September 2026:
 
 - `pnpm --dir apps/storefront exec tsc --noEmit` passed, including the inventory-aware cart update.
 - `pnpm --dir apps/storefront build` passed.
+- `pnpm --dir apps/backend exec tsc --noEmit -p src/admin/tsconfig.json` passed for the custom Admin page.
 - During the build, product static-path fetching reported `fetch failed` because the backend was unavailable; the build still completed.
 - Backend integration tests were not run in that review.
 

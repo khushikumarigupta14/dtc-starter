@@ -34,7 +34,7 @@ When documents disagree, an explicit approved task takes priority; update the af
 
 Create and publish products in Medusa Admin, using the File Module for images. Original artwork normally has quantity `1`. When inventory reaches zero, keep the product published and let the storefront show it as sold. Never mark a COD order as paid merely because it was placed.
 
-Custom artwork submissions are enquiries stored by the custom artwork module. Review the brief, contact the requester, and agree price, timing, revisions, delivery, and rights before creating any commercial commitment.
+Custom artwork submissions are enquiries stored by the custom artwork module. Review them in Medusa Admin under **Custom artwork**, contact the requester, and agree price, timing, revisions, delivery, and rights before creating any commercial commitment. The current Admin page is read-only; status changes and internal notes must wait for an agreed operator workflow.
 
 ## Release checklist
 
