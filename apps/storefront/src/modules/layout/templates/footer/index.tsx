@@ -11,13 +11,13 @@ export default async function Footer() {
   const productCategories = await listCategories();
 
   return (
-    <footer className="border-t border-stone-300 bg-[#211d1a] text-stone-100 w-full">
+    <footer className="border-t border-[var(--color-line)] bg-[var(--color-ink)] text-stone-100 w-full">
       <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-20 small:py-28">
           <div>
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
+              className="font-display text-3xl text-stone-100 hover:text-[#d9ad8f]"
             >
               Colourpalet
             </LocalizedClientLink>
@@ -136,7 +136,7 @@ export default async function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
+        <div className="flex w-full mb-10 border-t border-stone-700 pt-8 justify-between text-stone-400">
           <Text className="txt-compact-small">
             © {new Date().getFullYear()} Colourpalet. All rights reserved.
           </Text>

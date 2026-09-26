@@ -26,7 +26,8 @@ When documents disagree, an explicit approved task takes priority; update the af
 
 ## Day-to-day ownership
 
-- Artist/operator: catalog, images, INR pricing, inventory, orders, fulfilment, and customer records through Medusa Admin.
+- Artist/operator: catalog, images, INR pricing, inventory, vendor-submission approval/rejection, orders, fulfilment, and customer records through Medusa Admin.
+- Vendor: submit owned artwork, images, INR price, and available quantity through the storefront account dashboard; respond to review notes.
 - Engineering: storefront, custom modules/workflows, validation, integrations, deployment, and technical documentation.
 - Business owner: final copy, contact details, shipping/return promises, legal policies, tax, and production credentials.
 
@@ -34,7 +35,9 @@ When documents disagree, an explicit approved task takes priority; update the af
 
 Create and publish products in Medusa Admin, using the File Module for images. Original artwork normally has quantity `1`. When inventory reaches zero, keep the product published and let the storefront show it as sold. Never mark a COD order as paid merely because it was placed.
 
-Custom artwork submissions are enquiries stored by the custom artwork module. Review them in Medusa Admin under **Custom artwork**, contact the requester, and agree price, timing, revisions, delivery, and rights before creating any commercial commitment. The current Admin page is read-only; status changes and internal notes must wait for an agreed operator workflow.
+Vendor submissions remain private records until reviewed. Approve them under **Vendor review** in Medusa Admin; approval creates and publishes the Medusa product. Reject with a useful note when details need correction. Vendors never receive Medusa Admin access.
+
+Custom artwork submissions are enquiries stored by the custom artwork module. Review them in Medusa Admin under **Custom artwork**, contact the requester, and agree price, timing, revisions, delivery, and rights before creating any commercial commitment. Record private operator context in the internal note and move the enquiry through `new`, `under review`, `quote sent`, and an appropriate terminal state. Terminal requests can be reopened to `under review`; these states do not create an order or record payment.
 
 ## Release checklist
 

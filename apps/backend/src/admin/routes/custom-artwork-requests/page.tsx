@@ -1,6 +1,6 @@
 import { defineRouteConfig } from "@medusajs/admin-sdk"
 import { Button, Container, Heading, StatusBadge, Table, Text } from "@medusajs/ui"
-import { useQuery } from "@tanstack/react-query"
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
 
 type RequestStatus =
   | "new"
@@ -23,6 +23,7 @@ type CustomArtworkRequest = {
   instructions: string
   inspired_by_product_id: string | null
   status: RequestStatus
+  internal_note: string | null
   created_at: string
 }
 
@@ -49,6 +50,15 @@ const statusColors: Record<RequestStatus, "blue" | "orange" | "purple" | "green"
   cancelled: "grey",
 }
 
+const nextStatuses: Record<RequestStatus, RequestStatus[]> = {
+  new: ["under_review", "cancelled"],
+  under_review: ["quote_sent", "rejected", "cancelled"],
+  quote_sent: ["approved", "under_review", "rejected", "cancelled"],
+  approved: ["under_review"],
+  rejected: ["under_review"],
+  cancelled: ["under_review"],
+}
+
 const formatDate = (value: string | null) => {
   if (!value) return "Not specified"
 
@@ -71,10 +81,33 @@ const fetchRequests = async (): Promise<CustomArtworkRequestsResponse> => {
 }
 
 const CustomArtworkRequestsPage = () => {
+  const queryClient = useQueryClient()
   const { data, error, isLoading, refetch, isFetching } = useQuery({
     queryKey: ["custom-artwork-requests"],
     queryFn: fetchRequests,
   })
+  const updateRequest = useMutation({
+    mutationFn: async ({ id, status, internalNote }: { id: string; status?: RequestStatus; internalNote: string | null }) => {
+      const response = await fetch(`/admin/custom-artwork-requests/${id}`, {
+        method: "POST",
+        credentials: "include",
+        headers: { Accept: "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({ status, internal_note: internalNote }),
+      })
+      if (!response.ok) {
+        const body = await response.json().catch(() => null)
+        throw new Error(body?.message ?? "Could not update the request")
+      }
+      return response.json()
+    },
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["custom-artwork-requests"] }),
+  })
+
+  const edit = (request: CustomArtworkRequest, status?: RequestStatus) => {
+    const note = window.prompt("Internal note (visible only to Admin operators):", request.internal_note ?? "")
+    if (note === null) return
+    updateRequest.mutate({ id: request.id, status, internalNote: note.trim() || null })
+  }
 
   const requests = data?.custom_artwork_requests ?? []
 
@@ -91,6 +124,12 @@ const CustomArtworkRequestsPage = () => {
           Refresh
         </Button>
       </div>
+
+      {updateRequest.error && (
+        <div className="bg-ui-bg-subtle px-6 py-3" role="alert">
+          <Text size="small" className="text-ui-fg-error">{updateRequest.error.message}</Text>
+        </div>
+      )}
 
       {isLoading ? (
         <div className="px-6 py-16 text-center"><Text className="text-ui-fg-subtle">Loading requests…</Text></div>
@@ -115,6 +154,7 @@ const CustomArtworkRequestsPage = () => {
                 <Table.HeaderCell>Required by</Table.HeaderCell>
                 <Table.HeaderCell>Status</Table.HeaderCell>
                 <Table.HeaderCell>Received</Table.HeaderCell>
+                <Table.HeaderCell>Actions</Table.HeaderCell>
               </Table.Row>
             </Table.Header>
             <Table.Body>
@@ -140,8 +180,21 @@ const CustomArtworkRequestsPage = () => {
                     {request.inspired_by_product_id && <Text size="xsmall" className="mt-1 text-ui-fg-subtle">Inspired by: {request.inspired_by_product_id}</Text>}
                   </Table.Cell>
                   <Table.Cell>{formatDate(request.required_date)}</Table.Cell>
-                  <Table.Cell><StatusBadge color={statusColors[request.status]}>{statusLabels[request.status]}</StatusBadge></Table.Cell>
+                  <Table.Cell>
+                    <StatusBadge color={statusColors[request.status]}>{statusLabels[request.status]}</StatusBadge>
+                    {request.internal_note && <Text size="xsmall" className="mt-1 block max-w-56 whitespace-normal text-ui-fg-subtle">Note: {request.internal_note}</Text>}
+                  </Table.Cell>
                   <Table.Cell>{formatDate(request.created_at)}</Table.Cell>
+                  <Table.Cell>
+                    <div className="flex max-w-72 flex-wrap gap-2">
+                      {nextStatuses[request.status].map((status) => (
+                        <Button key={status} size="small" variant="secondary" onClick={() => edit(request, status)} disabled={updateRequest.isPending}>
+                          {statusLabels[status]}
+                        </Button>
+                      ))}
+                      <Button size="small" variant="transparent" onClick={() => edit(request)} disabled={updateRequest.isPending}>Edit note</Button>
+                    </div>
+                  </Table.Cell>
                 </Table.Row>
               ))}
             </Table.Body>

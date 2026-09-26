@@ -17,31 +17,36 @@ export default async function Nav() {
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-16 mx-auto border-b border-stone-300/70 bg-[#fffdf8]/90 backdrop-blur-xl duration-200">
-        <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
-          <div className="flex-1 basis-0 h-full flex items-center">
+      <div className="hidden h-7 items-center justify-between bg-[var(--color-olive)] px-[var(--page-gutter)] text-[9px] font-semibold uppercase tracking-[0.18em] text-white small:flex">
+        <span>Original artworks · Secure packaging · Pan India shipping</span>
+        <span>Custom artwork enquiries welcome</span>
+      </div>
+      <header className="relative h-[74px] mx-auto border-b border-[var(--color-line)] bg-[var(--color-surface)]/95 backdrop-blur-xl duration-200">
+        <nav className="content-container flex items-center justify-between w-full h-full text-sm">
+          <div className="h-full flex items-center small:hidden">
             <div className="h-full">
               <SideMenu regions={regions} locales={locales} currentLocale={currentLocale} />
             </div>
           </div>
 
-          <div className="flex items-center h-full">
+          <div className="flex items-center h-full small:order-first small:mr-12">
             <LocalizedClientLink
               href="/"
-              className="text-lg font-semibold tracking-[0.16em] text-stone-900 hover:text-amber-900 uppercase"
+              className="font-display text-2xl tracking-[-0.035em] text-[var(--color-ink)] hover:text-[var(--color-accent)] small:text-[30px]"
               data-testid="nav-store-link"
             >
               Colourpalet
             </LocalizedClientLink>
           </div>
 
-          <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
-            <div className="hidden small:flex items-center gap-x-6 h-full">
-              <LocalizedClientLink className="hover:text-ui-fg-base" href="/store">Artworks</LocalizedClientLink>
-              <LocalizedClientLink className="hover:text-ui-fg-base" href="/about">The artist</LocalizedClientLink>
-              <LocalizedClientLink className="hover:text-ui-fg-base" href="/custom-artwork">Custom art</LocalizedClientLink>
+          <div className="flex items-center gap-x-6 h-full flex-1 justify-end">
+            <div className="hidden small:flex items-center gap-x-7 h-full mr-auto">
+              <LocalizedClientLink className="hover:text-[var(--color-accent)]" href="/store">Shop</LocalizedClientLink>
+              <LocalizedClientLink className="hover:text-[var(--color-accent)]" href="/store">Collections</LocalizedClientLink>
+              <LocalizedClientLink className="hover:text-[var(--color-accent)]" href="/about">About the Artist</LocalizedClientLink>
+              <LocalizedClientLink className="hover:text-[var(--color-accent)]" href="/custom-artwork">Custom Artwork</LocalizedClientLink>
               <LocalizedClientLink
-                className="hover:text-ui-fg-base"
+                className="hover:text-[var(--color-accent)]"
                 href="/account"
                 data-testid="nav-account-link"
               >

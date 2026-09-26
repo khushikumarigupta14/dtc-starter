@@ -13,4 +13,5 @@ export const CustomArtworkRequest = model.define("custom_artwork_request", {
   instructions: model.text(),
   inspired_by_product_id: model.text().nullable(),
   status: model.enum(["new", "under_review", "quote_sent", "approved", "rejected", "cancelled"]).default("new"),
+  internal_note: model.text().nullable(),
 })

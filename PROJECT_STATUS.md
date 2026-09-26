@@ -1,6 +1,6 @@
 # Project Status and AI Handoff
 
-Last reviewed: 20 September 2026
+Last reviewed: 26 September 2026
 
 This is the first file an AI agent should read after the mandatory project rules. It describes the implemented system, known gaps, and recommended next work. Update it whenever a feature is added, removed, or materially changed.
 
@@ -56,7 +56,7 @@ Important entry points:
 
 ### Custom artwork enquiries
 
-The custom form is an enquiry, not a cart item or order. The storefront server action posts to `/store/custom-artwork-requests`; the backend validates with Zod and runs a Medusa workflow that writes through the custom module. An Admin API lists requests at `/admin/custom-artwork-requests`, and the Medusa Admin page at `/app/custom-artwork-requests` gives operators a read-only enquiry view. A customer can arrive from a sold artwork and retain its product ID as inspiration.
+The custom form is an enquiry, not a cart item or order. The storefront server action posts to `/store/custom-artwork-requests`; the backend validates with Zod and runs a Medusa workflow that writes through the custom module. Admin APIs list and update requests, and the Medusa Admin page at `/app/custom-artwork-requests` lets operators record internal notes and move enquiries through controlled states. A customer can arrive from a sold artwork and retain its product ID as inspiration.
 
 Important entry points:
 
@@ -69,22 +69,53 @@ Important entry points:
 - `apps/backend/src/workflows/create-custom-artwork-request.ts`
 - `apps/backend/src/modules/custom-artwork-request`
 
+### Vendor artwork submissions
+
+Authenticated customers can use the themed account route at `/[countryCode]/account/vendor-products` as a vendor studio. They can submit an artwork image, description, medium, dimensions, INR price, and quantity, then track awaiting-review, published, or needs-changes status. Store API reads are owner-scoped from the authenticated customer identity; the client cannot choose an owner ID.
+
+The Medusa Admin **Vendor review** page lists submissions. Approval creates a published Medusa product in the Colourpalet sales channel with its submitted INR price and inventory at the studio stock location. Rejection preserves the submission and returns a review note to the vendor. Vendors do not receive Medusa Admin access.
+
+Important entry points:
+
+- `apps/storefront/src/app/[countryCode]/(main)/account/@dashboard/vendor-products/page.tsx`
+- `apps/storefront/src/lib/data/vendor-products.ts`
+- `apps/backend/src/api/store/vendor-products/route.ts`
+- `apps/backend/src/api/admin/vendor-products`
+- `apps/backend/src/admin/routes/vendor-products/page.tsx`
+- `apps/backend/src/modules/vendor-product-submission`
+
 ### Brand and information pages
 
 The storefront includes About, Contact, FAQ, Shipping & Returns, Privacy, Terms, and an editorial page system. Navigation and footer expose these destinations. Legal and shipping content is draft copy, not production-approved policy.
 
 ## Recently completed
 
+- Made the backend Jest scripts cross-platform and corrected the test environment import so the suite runs on Windows.
+- Added eight focused API unit tests covering custom-enquiry validation/normalization, vendor authentication and owner-scoped listings, submission validation, required rejection notes, and pending-only rejection.
+- Added clean-PostgreSQL vendor integration coverage for authenticated owner scoping and approval-created publication, including INR price, sales-channel assignment, metadata, inventory quantity/location, and persisted review state.
+- Made the foundation seed create its required shipping profile when running against a freshly migrated database instead of assuming one already exists.
+- Synchronized installed Medusa dependencies with the locked `2.21.0` versions and added a storefront server-action precheck that rejects invalid, sold, or over-inventory add-to-cart quantities using a live uncached variant lookup plus the cart's existing quantity.
+- Added a clean-PostgreSQL COD checkout integration test that creates a real order through `pp_system_default` and verifies the order has no captured/collected payment.
+- Added clean-PostgreSQL coverage proving validated custom-artwork enquiries persist normalized data and published sold artwork remains available through the public Store API at zero inventory.
+- Added a concurrent clean-PostgreSQL checkout test proving Medusa's inventory-item reservation lock permits exactly one order when two carts compete for a one-of-one artwork.
+- Added clean-PostgreSQL HTTP authorization coverage proving custom Admin listings and vendor approval reject anonymous and customer credentials, with rejected mutations leaving submissions unchanged.
+- Verified the positive Admin HTTP path with a real User/Auth Identity fixture: authenticated Admins can list custom resources and approve a pending vendor submission into a published product.
+- Added an authenticated custom-enquiry operator workflow with internal notes and controlled `new → under review → quote sent → approved/rejected/cancelled` transitions, including terminal-state reopening to review.
+- Refreshed the storefront with the centralized Gallery Quiet theme: shared color, typography, spacing, focus, and button tokens now drive the homepage, navigation, product previews, collection rails, and footer.
+- Rebuilt the homepage around artwork-first hero imagery, category discovery, editorial curation, Medusa-backed featured originals, an honest empty-catalog state, and a custom-artwork enquiry banner.
+- Added responsive generated imagery for the hero, art categories, and custom-artwork section; desktop and mobile visual QA passed without horizontal overflow.
+
 - Cart retrieval now explicitly requests `items.variant.inventory_quantity`.
 - Managed-inventory quantity selectors use the current Medusa inventory value instead of a hard-coded limit, retain the current quantity when availability changes, disable during updates, and no longer render a duplicate option.
 - The server action rejects non-integer or sub-one quantities before calling Medusa; Medusa remains authoritative and performs final inventory validation.
 - Medusa Admin now includes a read-only Custom artwork requests page with loading, error/retry, empty, and populated states.
+- Added a Gallery Quiet vendor studio, authenticated owner-scoped artwork submissions, Admin approval/rejection, File Module uploads, and approval-created Medusa products with INR price and inventory.
 
 ## Known gaps and risks
 
 ### P0 — Correctness before release
 
-1. Run full backend integration tests with PostgreSQL, including inventory races, sold visibility, COD semantics, custom-request validation, and Admin authorization.
+1. Define any fine-grained operator roles the business needs before adding role-specific authorization; authenticated Admin success, anonymous/customer isolation, inventory races, sold visibility, COD semantics, and custom-request persistence now have clean-database coverage.
 2. Resolve the repository's existing unmerged `apps/storefront/tsconfig.tsbuildinfo` Git state without discarding user work. The generated file should normally not be a meaningful source artifact.
 
 ### P1 — Required production decisions
@@ -98,11 +129,11 @@ The storefront includes About, Contact, FAQ, Shipping & Returns, Privacy, Terms,
 
 ### P2 — Operations and experience
 
-1. Agree the custom-request operator workflow, then add authenticated status updates and internal notes to the existing read-only Admin page.
-2. Add pagination/search when enquiry volume requires it; the MVP currently returns requests newest-first.
-3. Complete responsive, keyboard, screen-reader, contrast, error/empty/loading, SEO, metadata, performance, and image optimization review.
-4. Add end-to-end coverage for browse → cart → COD checkout → confirmation and sold artwork → custom request.
-5. Verify all footer links preserve the country-code route and add automated navigation coverage.
+1. Add pagination/search when enquiry volume requires it; the MVP currently returns requests newest-first.
+2. Complete responsive, keyboard, screen-reader, contrast, error/empty/loading, SEO, metadata, performance, and image optimization review.
+3. Add end-to-end coverage for browse → cart → COD checkout → confirmation and sold artwork → custom request.
+4. Verify all footer links preserve the country-code route and add automated navigation coverage.
+5. Define vendor eligibility/onboarding, editing/resubmission, commission/payout, order visibility, and fulfilment policy; add authorization and approval integration coverage before production use.
 
 ## Recommended next task order
 
@@ -114,11 +145,40 @@ The storefront includes About, Contact, FAQ, Shipping & Returns, Privacy, Terms,
 
 ## Validation baseline
 
+On 26 September 2026:
+
+- `pnpm --dir apps/backend test:integration:http -- --runTestsByPath integration-tests/http/custom-and-sold.spec.ts` passed: 1 suite and 2 clean-database tests.
+- `pnpm --dir apps/backend test:integration:http -- --runTestsByPath integration-tests/http/cod-checkout.spec.ts` passed: 1 suite and 2 clean-database tests, including simultaneous checkout contention for stock `1`.
+- `pnpm --dir apps/backend test:integration:http -- --runTestsByPath integration-tests/http/admin-authorization.spec.ts` passed: 1 suite and 3 clean-database HTTP authorization tests.
+- `pnpm --dir apps/backend exec tsc --noEmit` passed after adding the sold-artwork and custom-request coverage.
+- `pnpm --dir apps/backend exec tsc --noEmit -p src/admin/tsconfig.json` passed after adding custom-request status and note controls.
+- `pnpm --dir apps/backend exec medusa db:migrate` applied `Migration20260926091347` for custom-request internal notes.
+- PostgreSQL-backed custom-request persistence/normalization, public sold-artwork visibility, COD semantics, atomic checkout inventory reservation, anonymous/customer isolation, and authenticated Admin listing/approval are covered. Future role-specific authorization depends on the operator-role policy.
+
+On 23 September 2026:
+
+- `pnpm --dir apps/backend test:unit` passed: 3 suites and 8 tests.
+- `pnpm --dir apps/backend test:integration:http -- --runTestsByPath integration-tests/http/vendor-products.spec.ts` passed: 1 suite and 2 clean-database tests.
+- `pnpm --dir apps/backend exec tsc --noEmit` passed.
+- `pnpm --dir apps/storefront exec tsc --noEmit` passed after the live add-to-cart inventory precheck.
+- PostgreSQL-backed vendor ownership, approval publication, and COD order-versus-collected-payment semantics are covered.
+- `pnpm --dir apps/backend test:integration:http -- --runTestsByPath integration-tests/http/cod-checkout.spec.ts` passed: 1 clean-database COD checkout test.
+
+On 21 September 2026:
+
+- `pnpm --dir apps/storefront exec tsc --noEmit` passed after the Gallery Quiet redesign.
+- `pnpm --dir apps/storefront build` passed; product static-path fetching still reported `fetch failed` when the backend was unavailable during that build.
+- Playwright desktop (1440 × 1100) and mobile (390 × 844) homepage captures passed visual QA with no horizontal overflow.
+- Primary homepage actions navigated to the localized store and custom-artwork routes.
+
 On 20 September 2026:
 
 - `pnpm --dir apps/storefront exec tsc --noEmit` passed, including the inventory-aware cart update.
 - `pnpm --dir apps/storefront build` passed.
 - `pnpm --dir apps/backend exec tsc --noEmit -p src/admin/tsconfig.json` passed for the custom Admin page.
+- `pnpm --dir apps/backend exec tsc --noEmit` passed after the vendor submission APIs and approval workflow.
+- `pnpm --dir apps/storefront exec tsc --noEmit` passed after the themed vendor dashboard.
+- `pnpm --dir apps/backend exec medusa db:migrate` applied `Migration20260921150000` for vendor submissions.
 - During the build, product static-path fetching reported `fetch failed` because the backend was unavailable; the build still completed.
 - Backend integration tests were not run in that review.
 

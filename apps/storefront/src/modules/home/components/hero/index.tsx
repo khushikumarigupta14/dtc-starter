@@ -1,24 +1,35 @@
-import { Button, Heading } from "@modules/common/components/ui";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
+import Image from "next/image";
+
 const Hero = () => {
   return (
-    <section className="min-h-[76vh] w-full border-b border-stone-300 relative overflow-hidden bg-[#efe4d3]">
-      <div className="absolute -right-24 -top-20 h-96 w-96 rounded-full bg-amber-200/60 blur-3xl" />
-      <div className="absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-rose-200/50 blur-3xl" />
-      <div className="content-container relative z-10 flex min-h-[70vh] flex-col justify-center py-20">
-        <div className="max-w-3xl">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-amber-900">Original art · Made in India</p>
-          <Heading
-            level="h1"
-            className="max-w-2xl text-5xl leading-[0.98] tracking-[-0.04em] text-stone-950 font-normal small:text-7xl"
-          >
-            Art that makes a space feel like yours.
-          </Heading>
-          <p className="mt-6 max-w-xl text-base leading-7 text-stone-700 small:text-lg">Collect original paintings and drawings from our studio, or commission a personal artwork created around your story.</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <LocalizedClientLink href="/store"><Button size="large">Shop original art</Button></LocalizedClientLink>
-            <LocalizedClientLink href="/custom-artwork"><Button size="large" variant="secondary">Request custom artwork</Button></LocalizedClientLink>
+    <section className="border-b border-[var(--color-line)] bg-[var(--color-surface)]">
+      <div className="grid min-h-[680px] small:grid-cols-[minmax(360px,42%)_1fr]">
+        <div className="flex items-center px-[var(--page-gutter)] py-20 small:py-24">
+          <div className="max-w-[610px]">
+            <p className="editorial-kicker mb-7">Original art for meaningful spaces</p>
+            <h1 className="editorial-title">Art that makes a room feel yours.</h1>
+            <p className="mt-7 max-w-lg text-base leading-7 text-[var(--color-muted)] small:text-lg">
+              Discover original paintings and drawings, or commission a one-of-a-kind artwork created around your story.
+            </p>
+            <div className="mt-9 flex flex-col gap-3 xsmall:flex-row">
+              <LocalizedClientLink href="/store" className="theme-button-primary">Explore originals</LocalizedClientLink>
+              <LocalizedClientLink href="/custom-artwork" className="theme-button-secondary">Commission an artwork</LocalizedClientLink>
+            </div>
+            <blockquote className="mt-14 border-l border-[var(--color-line)] pl-5 font-display text-lg italic text-[var(--color-muted)]">
+              “Art turns houses into homes.”
+            </blockquote>
           </div>
+        </div>
+        <div className="relative min-h-[460px] small:min-h-full">
+          <Image
+            src="/images/home/gallery-quiet-hero.png"
+            alt="Original figurative artwork displayed in a warm, sunlit home"
+            fill
+            priority
+            sizes="(max-width: 1023px) 100vw, 58vw"
+            className="object-cover object-center"
+          />
         </div>
       </div>
     </section>

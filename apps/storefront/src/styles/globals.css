@@ -2,10 +2,33 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-:root { --canvas: #f7f2e9; --ink: #211d1a; }
+:root {
+  --color-canvas: #f5f0e7;
+  --color-surface: #fffdf8;
+  --color-ink: #1f1b18;
+  --color-muted: #6f675f;
+  --color-line: #d8cfc1;
+  --color-accent: #a94f35;
+  --color-accent-strong: #843a28;
+  --color-olive: #737765;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Baskerville, Georgia, serif;
+  --font-body: Inter, Aptos, "Segoe UI", Helvetica, Arial, sans-serif;
+  --page-gutter: clamp(1.25rem, 4vw, 4.5rem);
+  --section-space: clamp(4.5rem, 8vw, 8rem);
+}
 html { scroll-behavior: smooth; }
-body { background: var(--canvas); color: var(--ink); }
-::selection { background: #e7b878; color: #211d1a; }
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: #d9ad8f; color: var(--color-ink); }
+h1, h2, h3, .font-display { font-family: var(--font-display); }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
 
 @layer utilities {
   /* Chrome, Safari and Opera */
@@ -56,11 +79,42 @@ body { background: var(--canvas); color: var(--ink); }
 
 @layer components {
   .content-container {
-    @apply max-w-[1440px] w-full mx-auto px-6;
+    @apply max-w-[1600px] w-full mx-auto;
+    padding-left: var(--page-gutter);
+    padding-right: var(--page-gutter);
   }
 
-  .editorial-kicker { @apply text-xs font-semibold uppercase tracking-[0.28em] text-amber-900; }
-  .paper-panel { @apply border border-stone-300/80 bg-[#fffdf8] shadow-[0_18px_60px_rgba(67,48,32,0.08)]; }
+  .editorial-kicker {
+    @apply text-[10px] font-semibold uppercase tracking-[0.3em];
+    color: var(--color-accent-strong);
+  }
+  .editorial-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 5.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    font-weight: 400;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.1rem, 3.4vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    font-weight: 400;
+  }
+  .paper-panel { @apply border bg-[#fffdf8]; border-color: var(--color-line); }
+  .theme-button-primary {
+    @apply inline-flex min-h-12 items-center justify-center px-7 text-sm font-semibold transition-colors duration-200;
+    background: var(--color-accent);
+    color: white;
+  }
+  .theme-button-primary:hover { background: var(--color-accent-strong); }
+  .theme-button-secondary {
+    @apply inline-flex min-h-12 items-center justify-center border px-7 text-sm font-semibold transition-colors duration-200;
+    border-color: var(--color-ink);
+    color: var(--color-ink);
+  }
+  .theme-button-secondary:hover { background: var(--color-ink); color: var(--color-surface); }
 
   .contrast-btn {
     @apply px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-200 ease-in;

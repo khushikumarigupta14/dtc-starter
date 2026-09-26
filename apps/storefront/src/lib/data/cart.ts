@@ -126,6 +126,9 @@ export async function addToCart({
   if (!variantId) {
     throw new Error("Missing variant ID when adding to cart")
   }
+  if (!Number.isInteger(quantity) || quantity < 1) {
+    throw new Error("Quantity must be a positive whole number")
+  }
 
   const cart = await getOrSetCart(countryCode)
 
@@ -135,6 +138,30 @@ export async function addToCart({
 
   const headers = {
     ...(await getAuthHeaders()),
+  }
+
+  const [{ variant }, currentCart] = await Promise.all([
+    sdk.client.fetch<{ variant: HttpTypes.StoreProductVariant }>(
+      `/store/variants/${variantId}`,
+      {
+        query: { fields: "id,manage_inventory,allow_backorder,inventory_quantity" },
+        headers,
+        cache: "no-store",
+      }
+    ),
+    retrieveCart(cart.id),
+  ])
+  if (variant.manage_inventory && !variant.allow_backorder) {
+    const existingQuantity =
+      currentCart?.items?.find((item) => item.variant_id === variantId)?.quantity ?? 0
+    const availableQuantity = variant.inventory_quantity ?? 0
+    if (existingQuantity + quantity > availableQuantity) {
+      throw new Error(
+        availableQuantity > 0
+          ? `Only ${availableQuantity} of this artwork is available`
+          : "This artwork is sold and unavailable"
+      )
+    }
   }
 
   await sdk.store.cart

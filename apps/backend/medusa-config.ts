@@ -17,5 +17,8 @@ module.exports = defineConfig({
     {
       resolve: "./src/modules/custom-artwork-request",
     },
+    {
+      resolve: "./src/modules/vendor-product-submission",
+    },
   ],
 })

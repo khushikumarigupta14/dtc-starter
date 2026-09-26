@@ -10,6 +10,7 @@ import {
   createRegionsWorkflow,
   createSalesChannelsWorkflow,
   createShippingOptionsWorkflow,
+  createShippingProfilesWorkflow,
   createStockLocationsWorkflow,
   createStoresWorkflow,
   createTaxRegionsWorkflow,
@@ -71,12 +72,17 @@ export default async function initialDataSeed({ container }: { container: Medusa
     entity: "shipping_profile",
     fields: ["id"],
   })
-  const shippingProfile = shippingProfiles[0]
-  if (!shippingProfile) {
-    throw new MedusaError(
-      MedusaError.Types.NOT_FOUND,
-      "No shipping profile exists after Medusa migrations"
-    )
+  let shippingProfileId = shippingProfiles[0]?.id
+  if (!shippingProfileId) {
+    const { result: createdProfiles } = await createShippingProfilesWorkflow(container).run({
+      input: {
+        data: [{ name: "Original Artwork", type: "default" }],
+      },
+    })
+    shippingProfileId = createdProfiles[0]?.id
+  }
+  if (!shippingProfileId) {
+    throw new MedusaError(MedusaError.Types.UNEXPECTED_STATE, "Shipping profile creation failed")
   }
 
   const fulfillmentSet = await fulfillmentModuleService.createFulfillmentSets({
@@ -94,7 +100,7 @@ export default async function initialDataSeed({ container }: { container: Medusa
       price_type: "flat",
       provider_id: "manual_manual",
       service_zone_id: fulfillmentSet.service_zones[0].id,
-      shipping_profile_id: shippingProfile.id,
+      shipping_profile_id: shippingProfileId,
       type: {
         label: "Standard Delivery",
         description: "Delivery within India",
