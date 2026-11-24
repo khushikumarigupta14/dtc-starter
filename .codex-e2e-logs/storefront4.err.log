@@ -1,0 +1,27 @@
+ WARN  Issue while reading "C:\Users\Raj\.npmrc". Failed parsing JSON config key msbuild_path: "C:\Program Files(x86)\Microsoft Visual Studio\2017\Community\Msbuild\Current\Bin\MSBuild.exe"
+ ⨯ Error: Not Found
+    at <unknown> (../../src/client.ts:101:11)
+    at Generator.next (<anonymous>)
+    at fulfilled (D:\khushi\project-me\Medusa_ecommerce\apps\storefront\.next\server\chunks\ssr\e8c99_@medusajs_js-sdk_dist_esm_69ed4ce5._.js:6485:32) {
+  statusText: 'Not Found',
+  status: 404,
+  digest: '4221242441'
+}
+ ⨯ Error: Not Found
+    at <unknown> (../../src/client.ts:101:11)
+    at Generator.next (<anonymous>)
+    at fulfilled (D:\khushi\project-me\Medusa_ecommerce\apps\storefront\.next\server\chunks\ssr\e8c99_@medusajs_js-sdk_dist_esm_69ed4ce5._.js:6485:32) {
+  statusText: 'Not Found',
+  status: 404,
+  digest: '4221242441'
+}
+ ⨯ Error: Not Found
+    at <unknown> (../../src/client.ts:101:11)
+    at Generator.next (<anonymous>)
+    at fulfilled (D:\khushi\project-me\Medusa_ecommerce\apps\storefront\.next\server\chunks\ssr\e8c99_@medusajs_js-sdk_dist_esm_69ed4ce5._.js:6485:32) {
+  statusText: 'Not Found',
+  status: 404,
+  digest: '4221242441'
+}
+Image with src "http://localhost:8000/images/home/category-paintings.png" is using quality "50" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities

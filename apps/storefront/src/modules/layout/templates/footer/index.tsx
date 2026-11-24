@@ -111,27 +111,27 @@ export default async function Footer() {
               <span className="txt-small-plus text-stone-100">Studio</span>
               <ul className="grid grid-cols-1 gap-y-2 text-stone-400 txt-small">
                 <li>
-                  <a
+                  <LocalizedClientLink
                     href="/store"
                     className="hover:text-ui-fg-base"
                   >
                     Shop artworks
-                  </a>
+                  </LocalizedClientLink>
                 </li>
                 <li>
-                  <a
+                  <LocalizedClientLink
                     href="/custom-artwork"
                     className="hover:text-ui-fg-base"
                   >
                     Custom artwork
-                  </a>
+                  </LocalizedClientLink>
                 </li>
-                <li><a href="/about" className="hover:text-amber-200">About the artist</a></li>
-                <li><a href="/contact" className="hover:text-amber-200">Contact</a></li>
-                <li><a href="/faq" className="hover:text-amber-200">FAQ</a></li>
-                <li><a href="/shipping-returns" className="hover:text-amber-200">Shipping & returns</a></li>
-                <li><a href="/privacy" className="hover:text-amber-200">Privacy</a></li>
-                <li><a href="/terms" className="hover:text-amber-200">Terms</a></li>
+                <li><LocalizedClientLink href="/about" className="hover:text-amber-200">About the artist</LocalizedClientLink></li>
+                <li><LocalizedClientLink href="/contact" className="hover:text-amber-200">Contact</LocalizedClientLink></li>
+                <li><LocalizedClientLink href="/faq" className="hover:text-amber-200">FAQ</LocalizedClientLink></li>
+                <li><LocalizedClientLink href="/shipping-returns" className="hover:text-amber-200">Shipping & returns</LocalizedClientLink></li>
+                <li><LocalizedClientLink href="/privacy" className="hover:text-amber-200">Privacy</LocalizedClientLink></li>
+                <li><LocalizedClientLink href="/terms" className="hover:text-amber-200">Terms</LocalizedClientLink></li>
               </ul>
             </div>
           </div>

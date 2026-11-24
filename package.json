@@ -11,6 +11,7 @@
     "start": "turbo start",
     "lint": "turbo lint",
     "test": "turbo test",
+    "test:e2e:storefront": "playwright test --config=apps/storefront/playwright.config.ts",
     "backend:seed": "turbo seed --filter=@dtc/backend",
     "backend:dev": "turbo dev --filter=@dtc/backend",
     "storefront:dev": "turbo dev --filter=@dtc/storefront"
@@ -22,7 +23,9 @@
     }
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
     "@medusajs/eslint-plugin": "2.21.0",
+    "@playwright/test": "1.55.0",
     "eslint": "^9.39.4",
     "jiti": "^2.7.0",
     "prettier": "^3.2.5",

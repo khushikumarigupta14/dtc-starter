@@ -34,10 +34,6 @@ export async function retrieveCart(cartId?: string, fields?: string) {
     ...(await getAuthHeaders()),
   }
 
-  const next = {
-    ...(await getCacheOptions("carts")),
-  }
-
   return await sdk.client
     .fetch<HttpTypes.StoreCartResponse>(`/store/carts/${id}`, {
       method: "GET",
@@ -45,8 +41,7 @@ export async function retrieveCart(cartId?: string, fields?: string) {
         fields,
       },
       headers,
-      next,
-      cache: "force-cache",
+      cache: "no-store",
     })
     .then(({ cart }: { cart: HttpTypes.StoreCart }) => cart)
     .catch(() => null)
@@ -140,17 +135,22 @@ export async function addToCart({
     ...(await getAuthHeaders()),
   }
 
-  const [{ variant }, currentCart] = await Promise.all([
-    sdk.client.fetch<{ variant: HttpTypes.StoreProductVariant }>(
-      `/store/variants/${variantId}`,
-      {
-        query: { fields: "id,manage_inventory,allow_backorder,inventory_quantity" },
-        headers,
-        cache: "no-store",
-      }
-    ),
+  const [{ products }, currentCart] = await Promise.all([
+    sdk.client.fetch<{ products: HttpTypes.StoreProduct[] }>("/store/products", {
+      query: {
+        "variants[id]": variantId,
+        region_id: cart.region_id,
+        fields: "id,*variants,+variants.inventory_quantity",
+      },
+      headers,
+      cache: "no-store",
+    }),
     retrieveCart(cart.id),
   ])
+  const variant = products[0]?.variants?.find((item) => item.id === variantId)
+  if (!variant) {
+    throw new Error("Selected artwork variant was not found")
+  }
   if (variant.manage_inventory && !variant.allow_backorder) {
     const existingQuantity =
       currentCart?.items?.find((item) => item.variant_id === variantId)?.quantity ?? 0

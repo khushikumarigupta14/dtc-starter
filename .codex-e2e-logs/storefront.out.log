@@ -1,0 +1,3166 @@
+
+> @dtc/storefront@1.0.3 dev D:\khushi\project-me\Medusa_ecommerce\apps\storefront
+> next dev --turbopack -p 8000
+
+   ▲ Next.js 15.5.24 (Turbopack)
+   - Local:        http://localhost:8000
+   - Network:      http://192.168.137.1:8000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ○ Compiling middleware ...
+ ✓ Compiled middleware in 1938ms
+ ✓ Ready in 26.7s
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 6.1s
+ GET /in 404 in 61ms
+ ○ Compiling /_not-found/page ...
+ GET /in 404 in 6ms
+ GET /in 404 in 4ms
+ GET /in 404 in 14ms
+ GET /in 404 in 8ms
+ GET /in 404 in 11ms
+ ✓ Compiled /_not-found/page in 38.4s
+ GET /in 404 in 37ms
+ GET /in 404 in 16ms
+ GET /in 404 in 5ms
+ ○ Compiling /[countryCode] ...
+ ✓ Compiled /[countryCode] in 12.5s
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=id%2C%20handle%2C%20title&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 401
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 404
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=4&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+ GET /in 200 in 28047ms
+ │ GET http://localhost:9000/store/regions 200 in 46ms (cache hit)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 401 in 81ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions 200 in 89ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=id%2C%20handle%2C%20title&limit=100&offset=0 200 in 443ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 315ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 339ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 345ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 389ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=4&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price 200 in 147ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=id%2C%20handle%2C%20title&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=4&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 401
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 404
+
+ GET /in 200 in 816ms
+ │ GET http://localhost:9000/store/collections?fields=id%2C%20handle%2C%20title&limit=100&offset=0 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=4&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 401 in 59ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions 200 in 9ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 6ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 47ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+ ○ Compiling /[countryCode]/products/[handle] ...
+ ✓ Compiled /[countryCode]/products/[handle] in 2.1s
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 401
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 404
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+ GET /in/products/e2e-sunlit-study 200 in 5529ms
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 401 in 43ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions 200 in 9ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 6ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 80ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 446ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 477ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 32ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 1006ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 1064ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /in/products/e2e-sunlit-study?v_id=variant_01M3HG1X25EX0TDX8APKZHWTZ6 200 in 485ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 5ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 6ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 2ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 401
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 404
+
+ GET /in/products/e2e-sunlit-study 200 in 930ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 6ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 9ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 401 in 103ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions 200 in 9ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 5ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 106ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 401
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 404
+
+ GET /in/products/e2e-sunlit-study 200 in 915ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 5ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 8ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 6ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 401 in 99ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions 200 in 10ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 129ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 401
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 404
+
+ GET /in/products/e2e-sunlit-study 200 in 1141ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 6ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 10ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 401 in 110ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions 200 in 12ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 6ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 156ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=id%2C%20handle%2C%20title&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=4&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Received response with status 404
+
+ GET /in 200 in 568ms
+ │ GET http://localhost:9000/store/collections?fields=id%2C%20handle%2C%20title&limit=100&offset=0 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 200 in 40ms (cache hit)
+ │ GET http://localhost:9000/store/regions 200 in 9ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 5ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=4&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price 200 in 92ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 82ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 401
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 404
+
+ GET /in/products/e2e-sunlit-study 200 in 1514ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 8ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 5ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 11ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 5ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 401 in 133ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions 200 in 14ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 7ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 148ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ ○ Compiling /[countryCode]/store ...
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ ✓ Compiled /[countryCode]/store in 2.3s
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&order=created_at
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+ GET /in/store 200 in 3792ms
+ │ GET http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&order=created_at 200 in 263ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ POST /in/store 200 in 272ms
+ POST /in/store 200 in 216ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+ GET /in/products/e2e-sunlit-study 200 in 530ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 85ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 98ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 217ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 232ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+ GET /in/products/e2e-sunlit-study?v_id=variant_01M3HG1X25EX0TDX8APKZHWTZ6 200 in 340ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+ GET /in/products/e2e-sunlit-study?v_id=variant_01M3HG1X25EX0TDX8APKZHWTZ6 200 in 226ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/carts
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/variants/variant_01M3HG1X25EX0TDX8APKZHWTZ6?fields=id%2Cmanage_inventory%2Callow_backorder%2Cinventory_quantity
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/carts/cart_01M3HGHJN0AHBM98WF80Y48QFZ?fields=%2Aitems%2C%20%2Aregion%2C%20%2Aitems.product%2C%20%2Aitems.variant%2C%20%2Bitems.variant.inventory_quantity%2C%20%2Aitems.thumbnail%2C%20%2Aitems.metadata%2C%20%2Bitems.total%2C%20%2Apromotions%2C%20%2Bshipping_methods.name
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 404
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/carts/cart_01M3HGHJN0AHBM98WF80Y48QFZ?fields=%2Aitems%2C%20%2Aregion%2C%20%2Aitems.product%2C%20%2Aitems.variant%2C%20%2Bitems.variant.inventory_quantity%2C%20%2Aitems.thumbnail%2C%20%2Aitems.metadata%2C%20%2Bitems.total%2C%20%2Apromotions%2C%20%2Bshipping_methods.name
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/shipping-options?cart_id=cart_01M3HGHJN0AHBM98WF80Y48QFZ
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 404
+
+Performing request to:
+ URL: http://localhost:9000/store/carts/cart_01M3HGHJN0AHBM98WF80Y48QFZ?fields=%2Aitems%2C%20%2Aregion%2C%20%2Aitems.product%2C%20%2Aitems.variant%2C%20%2Bitems.variant.inventory_quantity%2C%20%2Aitems.thumbnail%2C%20%2Aitems.metadata%2C%20%2Bitems.total%2C%20%2Apromotions%2C%20%2Bshipping_methods.name
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+ POST /in/products/e2e-sunlit-study?v_id=variant_01M3HG1X25EX0TDX8APKZHWTZ6 500 in 1229ms
+ │ POST http://localhost:9000/store/carts 200 in 557ms (cache skip)
+ │ │ Cache skipped reason: (fetchCache = default-no-store)
+ │ GET http://localhost:9000/store/variants/variant_01M3HG1X25EX0TDX8APKZHWTZ6?fields=id%2Cmanage_inventory%2Callow_backorder%2Cinventory_quantity 404 in 33ms (cache skip)
+ │ │ Cache skipped reason: (cache: no-store)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 200 in 6ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/carts/cart_01M3HGHJN0AHBM98WF80Y48QFZ?fields=%2Aitems%2C%20%2Aregion%2C%20%2Aitems.product%2C%20%2Aitems.variant%2C%20%2Bitems.variant.inventory_quantity%2C%20%2Aitems.thumbnail%2C%20%2Aitems.metadata%2C%20%2Bitems.total%2C%20%2Apromotions%2C%20%2Bshipping_methods.name 200 in 114ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/carts/cart_01M3HGHJN0AHBM98WF80Y48QFZ?fields=%2Aitems%2C%20%2Aregion%2C%20%2Aitems.product%2C%20%2Aitems.variant%2C%20%2Bitems.variant.inventory_quantity%2C%20%2Aitems.thumbnail%2C%20%2Aitems.metadata%2C%20%2Bitems.total%2C%20%2Apromotions%2C%20%2Bshipping_methods.name 200 in 77ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/shipping-options?cart_id=cart_01M3HGHJN0AHBM98WF80Y48QFZ 200 in 226ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 33ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/carts/cart_01M3HGHJN0AHBM98WF80Y48QFZ?fields=%2Aitems%2C%20%2Aregion%2C%20%2Aitems.product%2C%20%2Aitems.variant%2C%20%2Bitems.variant.inventory_quantity%2C%20%2Aitems.thumbnail%2C%20%2Aitems.metadata%2C%20%2Bitems.total%2C%20%2Apromotions%2C%20%2Bshipping_methods.name 200 in 3ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 401
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 404
+
+ GET /in/products/e2e-sunlit-study 200 in 1992ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 9ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 7ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 9ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 401 in 228ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions 200 in 12ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 7ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 192ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 401
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 404
+
+ GET /in/products/e2e-sunlit-study 200 in 2547ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 11ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 6ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 19ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 11ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 401 in 217ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions 200 in 19ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 13ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 9ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 267ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 401
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 404
+
+ GET /in/products/e2e-sunlit-study 200 in 2198ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 13ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 14ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 23ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 14ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 5ms (cache hit)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 401 in 253ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions 200 in 14ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 9ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 323ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/carts/cart_01M3HGHJN0AHBM98WF80Y48QFZ/customer
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 401
+
+ POST /in/products/e2e-sunlit-study?v_id=variant_01M3HG1X25EX0TDX8APKZHWTZ6 500 in 257ms
+ │ POST http://localhost:9000/store/carts/cart_01M3HGHJN0AHBM98WF80Y48QFZ/customer 401 in 16ms (cache skip)
+ │ │ Cache skipped reason: (fetchCache = default-no-store)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/carts/cart_01M3HGHJN0AHBM98WF80Y48QFZ/customer
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 401
+
+ POST /in/products/e2e-sunlit-study?v_id=variant_01M3HG1X25EX0TDX8APKZHWTZ6 500 in 182ms
+ │ POST http://localhost:9000/store/carts/cart_01M3HGHJN0AHBM98WF80Y48QFZ/customer 401 in 10ms (cache skip)
+ │ │ Cache skipped reason: (fetchCache = default-no-store)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ ○ Compiling /[countryCode]/cart ...
+ ✓ Compiled /[countryCode]/cart in 915ms
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=id%2C%20handle%2C%20title&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=4&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+ GET /in 200 in 294ms
+ │ GET http://localhost:9000/store/collections?fields=id%2C%20handle%2C%20title&limit=100&offset=0 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=4&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price 200 in 2ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/carts/cart_01M3HGHJN0AHBM98WF80Y48QFZ?fields=%2Aitems%2C%20%2Aregion%2C%20%2Aitems.product%2C%20%2Aitems.variant%2C%20%2Bitems.variant.inventory_quantity%2C%20%2Aitems.thumbnail%2C%20%2Aitems.metadata%2C%20%2Bitems.total%2C%20%2Apromotions%2C%20%2Bshipping_methods.name
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "authorization": "<REDACTED>",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff"
+}
+
+Received response with status 200
+
+ GET /in/cart 200 in 2805ms
+ │ GET http://localhost:9000/store/carts/cart_01M3HGHJN0AHBM98WF80Y48QFZ?fields=%2Aitems%2C%20%2Aregion%2C%20%2Aitems.product%2C%20%2Aitems.variant%2C%20%2Bitems.variant.inventory_quantity%2C%20%2Aitems.thumbnail%2C%20%2Aitems.metadata%2C%20%2Bitems.total%2C%20%2Apromotions%2C%20%2Bshipping_methods.name 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 200 in 2ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+ ○ Compiling /[countryCode]/about ...
+ ✓ Compiled /[countryCode]/about in 562ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+ GET /in/about 200 in 1777ms
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 401
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 404
+
+ GET /in/products/e2e-sunlit-study 200 in 874ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 6ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 401 in 87ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions 200 in 10ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 6ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 80ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /in/products/e2e-sunlit-study?v_id=variant_01M3HG1X25EX0TDX8APKZHWTZ6 200 in 437ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 5ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 5ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 2ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 401
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 404
+
+ GET /in/products/e2e-sunlit-study 200 in 605ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 5ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 401 in 67ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 50ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /in/products/e2e-sunlit-study?v_id=variant_01M3HG1X25EX0TDX8APKZHWTZ6 200 in 211ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/customers/me?fields=%2Aorders
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 401
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/locales
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 404
+
+ GET /in/products/e2e-sunlit-study 200 in 1987ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 8ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 6ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 5ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 8ms (cache hit)
+ │ GET http://localhost:9000/store/customers/me?fields=%2Aorders 401 in 120ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/regions 200 in 12ms (cache hit)
+ │ GET http://localhost:9000/store/collections?fields=%2Aproducts&limit=100&offset=0 200 in 7ms (cache hit)
+ │ GET http://localhost:9000/store/product-categories?fields=%2Acategory_children%2C%20%2Aproducts%2C%20%2Aparent_category%2C%20%2Aparent_category.parent_category&limit=100 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/locales 404 in 179ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /in/products/e2e-sunlit-study?v_id=variant_01M3HG1X25EX0TDX8APKZHWTZ6 200 in 472ms
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&handle=e2e-sunlit-study 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/regions/reg_01M2YR76ZCYPY9HHJQQPJKFBR5 200 in 4ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&is_giftcard=false 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/products?limit=12&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=%2Avariants.calculated_price%2C%2Bvariants.inventory_quantity%2C%2Avariants.images%2C%2Avariants.options%2C%2Bmetadata%2C%2Btags%2C&id%5B0%5D=prod_01M3HG1WXV0R1FM066F45D7YPT 200 in 2ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/regions
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/products?limit=100&offset=0&region_id=reg_01M2YR76ZCYPY9HHJQQPJKFBR5&fields=handle
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b82aaed1f33fe85311769bddda32c230142250023af3e82cd0153eae64ce08ff",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+[?25h

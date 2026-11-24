@@ -1,0 +1,145 @@
+ WARN  Issue while reading "C:\Users\Raj\.npmrc". Failed parsing JSON config key msbuild_path: "C:\Program Files(x86)\Microsoft Visual Studio\2017\Community\Msbuild\Current\Bin\MSBuild.exe"
+ ⨯ Error [TypeError]: fetch failed
+    at getRegionMap (apps\storefront\src\middleware.ts:33:28)
+    at middleware (apps\storefront\src\middleware.ts:117:27)
+  31 |   ) {
+  32 |     // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
+> 33 |     const response = await fetch(`${BACKEND_URL}/store/regions`, {
+     |                            ^
+  34 |       method: "GET",
+  35 |       headers: {
+  36 |         "x-publishable-api-key": PUBLISHABLE_API_KEY,
+ ⨯ Error [TypeError]: fetch failed
+    at getRegionMap (apps\storefront\src\middleware.ts:33:28)
+    at middleware (apps\storefront\src\middleware.ts:117:27)
+  31 |   ) {
+  32 |     // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
+> 33 |     const response = await fetch(`${BACKEND_URL}/store/regions`, {
+     |                            ^
+  34 |       method: "GET",
+  35 |       headers: {
+  36 |         "x-publishable-api-key": PUBLISHABLE_API_KEY,
+ ⨯ Error [TypeError]: fetch failed
+    at getRegionMap (apps\storefront\src\middleware.ts:33:28)
+    at middleware (apps\storefront\src\middleware.ts:117:27)
+  31 |   ) {
+  32 |     // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
+> 33 |     const response = await fetch(`${BACKEND_URL}/store/regions`, {
+     |                            ^
+  34 |       method: "GET",
+  35 |       headers: {
+  36 |         "x-publishable-api-key": PUBLISHABLE_API_KEY,
+ ⨯ Error [TypeError]: fetch failed
+    at getRegionMap (apps\storefront\src\middleware.ts:33:28)
+    at middleware (apps\storefront\src\middleware.ts:117:27)
+  31 |   ) {
+  32 |     // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
+> 33 |     const response = await fetch(`${BACKEND_URL}/store/regions`, {
+     |                            ^
+  34 |       method: "GET",
+  35 |       headers: {
+  36 |         "x-publishable-api-key": PUBLISHABLE_API_KEY,
+ ⨯ Error [TypeError]: fetch failed
+    at getRegionMap (apps\storefront\src\middleware.ts:33:28)
+    at middleware (apps\storefront\src\middleware.ts:117:27)
+  31 |   ) {
+  32 |     // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
+> 33 |     const response = await fetch(`${BACKEND_URL}/store/regions`, {
+     |                            ^
+  34 |       method: "GET",
+  35 |       headers: {
+  36 |         "x-publishable-api-key": PUBLISHABLE_API_KEY,
+ ⨯ Error [TypeError]: fetch failed
+    at getRegionMap (apps\storefront\src\middleware.ts:33:28)
+    at middleware (apps\storefront\src\middleware.ts:117:27)
+  31 |   ) {
+  32 |     // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
+> 33 |     const response = await fetch(`${BACKEND_URL}/store/regions`, {
+     |                            ^
+  34 |       method: "GET",
+  35 |       headers: {
+  36 |         "x-publishable-api-key": PUBLISHABLE_API_KEY,
+ ⨯ Error [TypeError]: fetch failed
+    at getRegionMap (apps\storefront\src\middleware.ts:33:28)
+    at middleware (apps\storefront\src\middleware.ts:117:27)
+  31 |   ) {
+  32 |     // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
+> 33 |     const response = await fetch(`${BACKEND_URL}/store/regions`, {
+     |                            ^
+  34 |       method: "GET",
+  35 |       headers: {
+  36 |         "x-publishable-api-key": PUBLISHABLE_API_KEY,
+ ⨯ Error [TypeError]: fetch failed
+    at getRegionMap (apps\storefront\src\middleware.ts:33:28)
+    at middleware (apps\storefront\src\middleware.ts:117:27)
+  31 |   ) {
+  32 |     // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
+> 33 |     const response = await fetch(`${BACKEND_URL}/store/regions`, {
+     |                            ^
+  34 |       method: "GET",
+  35 |       headers: {
+  36 |         "x-publishable-api-key": PUBLISHABLE_API_KEY,
+ ⨯ Error [TypeError]: fetch failed
+    at getRegionMap (apps\storefront\src\middleware.ts:33:28)
+    at middleware (apps\storefront\src\middleware.ts:117:27)
+  31 |   ) {
+  32 |     // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
+> 33 |     const response = await fetch(`${BACKEND_URL}/store/regions`, {
+     |                            ^
+  34 |       method: "GET",
+  35 |       headers: {
+  36 |         "x-publishable-api-key": PUBLISHABLE_API_KEY,
+ ⨯ Error [TypeError]: fetch failed
+    at getRegionMap (apps\storefront\src\middleware.ts:33:28)
+    at middleware (apps\storefront\src\middleware.ts:117:27)
+  31 |   ) {
+  32 |     // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
+> 33 |     const response = await fetch(`${BACKEND_URL}/store/regions`, {
+     |                            ^
+  34 |       method: "GET",
+  35 |       headers: {
+  36 |         "x-publishable-api-key": PUBLISHABLE_API_KEY,
+ ⨯ Error [TypeError]: fetch failed
+    at getRegionMap (apps\storefront\src\middleware.ts:33:28)
+    at middleware (apps\storefront\src\middleware.ts:117:27)
+  31 |   ) {
+  32 |     // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
+> 33 |     const response = await fetch(`${BACKEND_URL}/store/regions`, {
+     |                            ^
+  34 |       method: "GET",
+  35 |       headers: {
+  36 |         "x-publishable-api-key": PUBLISHABLE_API_KEY,
+ ⨯ Error [TypeError]: fetch failed
+    at getRegionMap (apps\storefront\src\middleware.ts:33:28)
+    at middleware (apps\storefront\src\middleware.ts:117:27)
+  31 |   ) {
+  32 |     // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
+> 33 |     const response = await fetch(`${BACKEND_URL}/store/regions`, {
+     |                            ^
+  34 |       method: "GET",
+  35 |       headers: {
+  36 |         "x-publishable-api-key": PUBLISHABLE_API_KEY,
+ ⨯ Error: Not Found
+    at <unknown> (../../src/client.ts:101:11)
+    at Generator.next (<anonymous>)
+    at fulfilled (D:\khushi\project-me\Medusa_ecommerce\apps\storefront\.next\server\chunks\ssr\e8c99_@medusajs_js-sdk_dist_esm_69ed4ce5._.js:6485:32) {
+  statusText: 'Not Found',
+  status: 404,
+  digest: '4221242441'
+}
+ ⨯ Error: Unauthorized
+    at <unknown> (../../src/client.ts:101:11)
+    at Generator.next (<anonymous>)
+    at fulfilled (D:\khushi\project-me\Medusa_ecommerce\apps\storefront\.next\server\chunks\ssr\e8c99_@medusajs_js-sdk_dist_esm_69ed4ce5._.js:6485:32) {
+  statusText: 'Unauthorized',
+  status: 401,
+  digest: '1642978185'
+}
+ ⨯ Error: Unauthorized
+    at <unknown> (../../src/client.ts:101:11)
+    at Generator.next (<anonymous>)
+    at fulfilled (D:\khushi\project-me\Medusa_ecommerce\apps\storefront\.next\server\chunks\ssr\e8c99_@medusajs_js-sdk_dist_esm_69ed4ce5._.js:6485:32) {
+  statusText: 'Unauthorized',
+  status: 401,
+  digest: '1642978185'
+}

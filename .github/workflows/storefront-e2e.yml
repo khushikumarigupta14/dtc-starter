@@ -1,0 +1,119 @@
+name: Storefront E2E
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: storefront-e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: colourpalet
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d colourpalet"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+    env:
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432/colourpalet
+      DB_NAME: colourpalet
+      STORE_CORS: http://localhost:8000
+      ADMIN_CORS: http://localhost:9000
+      AUTH_CORS: http://localhost:8000,http://localhost:9000
+      JWT_SECRET: ci-only-jwt-secret-not-for-production
+      COOKIE_SECRET: ci-only-cookie-secret-not-for-production
+      NEXT_PUBLIC_MEDUSA_BACKEND_URL: http://localhost:9000
+      NEXT_PUBLIC_DEFAULT_REGION: in
+      NEXT_PUBLIC_BASE_URL: http://localhost:8000
+      STOREFRONT_URL: http://localhost:8000
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.11.1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.0
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright Chromium
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Migrate and seed Medusa
+        run: |
+          pnpm --dir apps/backend exec medusa db:migrate
+          pnpm --dir apps/backend seed
+
+      - name: Configure ephemeral storefront key
+        shell: bash
+        run: |
+          publishable_key="$(psql "$DATABASE_URL" -tAc "select token from api_key where type = 'publishable' order by created_at desc limit 1")"
+          if [ -z "$publishable_key" ]; then
+            echo "Foundation seed did not create a publishable API key" >&2
+            exit 1
+          fi
+          echo "::add-mask::$publishable_key"
+          echo "NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY=$publishable_key" >> "$GITHUB_ENV"
+
+      - name: Start backend and storefront
+        shell: bash
+        run: |
+          pnpm --dir apps/backend dev > backend-e2e.log 2>&1 &
+          echo $! > backend-e2e.pid
+          pnpm --dir apps/storefront dev > storefront-e2e.log 2>&1 &
+          echo $! > storefront-e2e.pid
+
+      - name: Wait for local services
+        shell: bash
+        run: |
+          for attempt in {1..90}; do
+            backend_ready=false
+            storefront_ready=false
+            curl --fail --silent http://localhost:9000/health >/dev/null && backend_ready=true || true
+            curl --fail --silent http://localhost:8000/in >/dev/null && storefront_ready=true || true
+            if [ "$backend_ready" = true ] && [ "$storefront_ready" = true ]; then
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "Services did not become ready within 180 seconds" >&2
+          exit 1
+
+      - name: Run storefront Playwright suite
+        run: pnpm test:e2e:storefront
+
+      - name: Upload Playwright failure artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: storefront-playwright-failure
+          if-no-files-found: ignore
+          retention-days: 7
+          path: |
+            apps/storefront/test-results/
+            apps/storefront/playwright-report/
+            backend-e2e.log
+            storefront-e2e.log

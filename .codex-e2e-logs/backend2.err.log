@@ -1,0 +1,2 @@
+ WARN  Issue while reading "C:\Users\Raj\.npmrc". Failed parsing JSON config key msbuild_path: "C:\Program Files(x86)\Microsoft Visual Studio\2017\Community\Msbuild\Current\Bin\MSBuild.exe"
+- Creating server

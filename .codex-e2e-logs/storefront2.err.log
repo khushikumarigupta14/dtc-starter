@@ -1,0 +1,11 @@
+ WARN  Issue while reading "C:\Users\Raj\.npmrc". Failed parsing JSON config key msbuild_path: "C:\Program Files(x86)\Microsoft Visual Studio\2017\Community\Msbuild\Current\Bin\MSBuild.exe"
+ ⨯ Failed to start server
+Error: listen EADDRINUSE: address already in use :::8000
+    at <unknown> (Error: listen EADDRINUSE: address already in use :::8000)
+    at new Promise (<anonymous>) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 8000
+}

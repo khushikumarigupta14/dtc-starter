@@ -104,6 +104,14 @@ The storefront includes About, Contact, FAQ, Shipping & Returns, Privacy, Terms,
 - Refreshed the storefront with the centralized Gallery Quiet theme: shared color, typography, spacing, focus, and button tokens now drive the homepage, navigation, product previews, collection rails, and footer.
 - Rebuilt the homepage around artwork-first hero imagery, category discovery, editorial curation, Medusa-backed featured originals, an honest empty-catalog state, and a custom-artwork enquiry banner.
 - Added responsive generated imagery for the hero, art categories, and custom-artwork section; desktop and mobile visual QA passed without horizontal overflow.
+- Completed a browser-driven guest acceptance journey from product detail through cart, address, delivery, COD payment, review, order confirmation, sold state, and a source-linked custom-artwork request.
+- Fixed add-to-cart's Medusa v2 inventory precheck to use the supported Store product query instead of the unavailable `/store/variants/:id` route.
+- Made mutable cart retrieval and product-detail availability checks uncached so newly added items and one-of-one sold state reflect current backend inventory.
+- Corrected the streamed cart navigation state so the resolved header shows the live item count and the loading fallback no longer claims an incorrect zero.
+- Replaced remaining customer-facing “Medusa Store” checkout, account, legal-review, and page-metadata copy with Colourpalet branding and removed the checkout vendor CTA.
+- Converted every static Studio footer destination to the localized link primitive and added maintained Playwright coverage for all eight country-aware routes.
+- Expanded maintained storefront E2E coverage to a 390 × 844 mobile menu journey, non-navigation dismissal, localized empty-cart recovery, and native validation for incomplete custom-artwork enquiries.
+- Added a GitHub Actions storefront E2E job with fresh PostgreSQL, migrations and foundation seed, masked ephemeral publishable key discovery, backend/storefront readiness checks, Chromium, concurrency cancellation, and retained failure artifacts.
 
 - Cart retrieval now explicitly requests `items.variant.inventory_quantity`.
 - Managed-inventory quantity selectors use the current Medusa inventory value instead of a hard-coded limit, retain the current quantity when availability changes, disable during updates, and no longer render a duplicate option.
@@ -131,8 +139,8 @@ The storefront includes About, Contact, FAQ, Shipping & Returns, Privacy, Terms,
 
 1. Add pagination/search when enquiry volume requires it; the MVP currently returns requests newest-first.
 2. Complete responsive, keyboard, screen-reader, contrast, error/empty/loading, SEO, metadata, performance, and image optimization review.
-3. Add end-to-end coverage for browse → cart → COD checkout → confirmation and sold artwork → custom request.
-4. Verify all footer links preserve the country-code route and add automated navigation coverage.
+3. Promote the local browser acceptance journey into maintained CI coverage with isolated fixture lifecycle management.
+4. Run a focused accessibility audit and add automated critical checks for landmarks, names, keyboard navigation, focus handling, and contrast-sensitive UI states.
 5. Define vendor eligibility/onboarding, editing/resubmission, commission/payout, order visibility, and fulfilment policy; add authorization and approval integration coverage before production use.
 
 ## Recommended next task order
@@ -144,6 +152,16 @@ The storefront includes About, Contact, FAQ, Shipping & Returns, Privacy, Terms,
 5. Run accessibility, performance, security, responsive, and content QA; then complete launch acceptance.
 
 ## Validation baseline
+
+On 27 September 2026:
+
+- `pnpm --dir=apps/storefront exec tsc --noEmit` passed after the Store API and mutable-cache fixes.
+- Playwright/Chrome completed the full local guest journey: product → cart → address → delivery → `pp_system` Cash on Delivery → review → confirmation (order `2`) → sold artwork → source-linked custom request → request confirmation.
+- The browser run captured no page errors or HTTP 5xx responses. Nine inspected screenshots are retained under `.codex-e2e/screenshots/` for this workspace audit.
+- A follow-up browser run passed with order `3`, a live `Cart (1)` header assertion, Colourpalet checkout branding, and no “Medusa Store” text in review.
+- `PLAYWRIGHT_CHANNEL=chrome pnpm test:e2e:storefront` passed: 8 footer navigation tests covering Shop, Custom artwork, About, Contact, FAQ, Shipping & returns, Privacy, and Terms with `/in` preserved.
+- After adding responsive and failure-state coverage, `PLAYWRIGHT_CHANNEL=chrome pnpm test:e2e:storefront` passed 12 tests: the eight footer routes plus mobile menu navigation/dismissal, empty-cart recovery, and incomplete custom-request validation.
+- The storefront E2E workflow passed Prettier validation locally, storefront TypeScript passed, and the artifact-enabled Playwright configuration passed all 12 tests locally. The first hosted GitHub Actions run remains pending until these changes are pushed.
 
 On 26 September 2026:
 

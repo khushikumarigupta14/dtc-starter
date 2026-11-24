@@ -85,6 +85,7 @@ const CartDropdown = ({
             className="hover:text-ui-fg-base"
             href="/cart"
             data-testid="nav-cart-link"
+            aria-live="polite"
           >{`Cart (${totalItems})`}</LocalizedClientLink>
         </PopoverButton>
         <Transition

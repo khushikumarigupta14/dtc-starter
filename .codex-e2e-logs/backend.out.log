@@ -1,0 +1,5 @@
+
+> @dtc/backend@0.0.1 dev D:\khushi\project-me\Medusa_ecommerce\apps\backend
+> medusa develop
+
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
